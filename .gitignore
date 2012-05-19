@@ -1,0 +1,6 @@
+.DS_Store
+.autotest
+spec/secrets.yml
+converter.rb
+Gemfile*
+spec/cassettes/*
