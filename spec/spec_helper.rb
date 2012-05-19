@@ -32,8 +32,8 @@ VCR.configure do |config|
 end
 
 secrets = YAML::load( File.open( 'spec/secrets.yml' ) )
-p secrets
+
 BASECAMP_TOKEN = secrets['bc_token']
 BASECAMP_URL = secrets['bc_url']
-PODIO_TOKEN = secrets['p_token']
+PODIO_TOKEN = secrets['p_client_id']
 PODIO_SECRET = secrets['p_secret']
