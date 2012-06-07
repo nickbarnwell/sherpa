@@ -6,6 +6,7 @@ describe 'Sherpa client test' do
 
     let(:bhash) { {url: BASECAMP_URL, token: BASECAMP_TOKEN} }
     let(:phash) { {api_key: PODIO_KEY, api_secret: PODIO_SECRET}}
+    # let(:sherpa) {Sherpa}
 
     it 'should be able to setup a basecamp connection' do
       Sherpa.setup_basecamp(bhash[:url], bhash[:token])
@@ -19,6 +20,7 @@ describe 'Sherpa client test' do
     end
 
     it 'should be able to login as a Podio user' do
+      # binding.pry
       expect { Sherpa.podio.authenticate_with_credentials(
         API_SETTINGS['podio_mail'], API_SETTINGS['podio_pw']
       ) }.to_not raise_error

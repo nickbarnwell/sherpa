@@ -6,9 +6,8 @@ require 'state_machine'
 module Sherpa
   class << self
     def setup(basecamp, podio)
-      sherpa = Sherpa.new
-      sherpa.setup_basecamp(basecamp[:url], basecamp[:token])
-      sherpa.setup_podio(podio)
+      Sherpa.setup_basecamp(basecamp[:url], basecamp[:token])
+      Sherpa.setup_podio(podio)
     end
 
     def setup_basecamp(url, token)
@@ -23,7 +22,7 @@ module Sherpa
 
     def setup_podio(options={})
       Podio.setup(options)
-      podio = Podio
+      Sherpa.podio = Podio.client
     end
 
     def basecamp_client
@@ -47,4 +46,5 @@ module Sherpa
   autoload :Project,    'sherpa/models/project'
   autoload :User,       'sherpa/models/user'
   autoload :Milestone,  'sherpa/models/milestone'
+  autoload :Space,      'sherpa/models/space'
 end
