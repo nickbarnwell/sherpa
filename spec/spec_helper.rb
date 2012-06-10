@@ -1,4 +1,3 @@
-# This file is copied to spec/ when you run 'rails generate rspec:install'
 require "bundler/setup"
 
 require 'sherpa' #There's probably a better way to do this
@@ -30,3 +29,5 @@ BASECAMP_TOKEN = API_SETTINGS['basecamp_token']
 BASECAMP_URL = API_SETTINGS['basecamp_url']
 PODIO_KEY = API_SETTINGS['podio_api_key']
 PODIO_SECRET = API_SETTINGS['podio_api_secret']
+PODIO_LOGIN = API_SETTINGS['podio_mail']
+PODIO_PW = API_SETTINGS['podio_pw']
