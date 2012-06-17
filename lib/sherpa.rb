@@ -42,9 +42,13 @@ module Sherpa
     end
   end
 
+  #TODO: Remove after tests are written - shouldn't be needed
+  autoload :Convertible, 'sherpa/models/convertible'
   autoload :Message,    'sherpa/models/message'
   autoload :Project,    'sherpa/models/project'
   autoload :User,       'sherpa/models/user'
   autoload :Milestone,  'sherpa/models/milestone'
   autoload :Space,      'sherpa/models/space'
+  autoload :PodioField, 'sherpa/models/podio_field'
+
 end
